@@ -12,10 +12,18 @@ function App() {
     <BrowserRouter>
       {isAuthenticated && <Navbar setIsAuthenticated={setIsAuthenticated} />}
       <Routes>
-        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-        <Route path="/dashboard" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} />
-        <Route path="/expenses" element={isAuthenticated ? <Expenses /> : <Navigate to="/login" />} />
-        <Route path="*" element={<Navigate to="/login" />} />
+        <Route path="/login" element={
+          isAuthenticated ? <Navigate to="/dashboard" /> : <Login setIsAuthenticated={setIsAuthenticated} />
+        } />
+        <Route path="/dashboard" element={
+          isAuthenticated ? <Dashboard /> : <Navigate to="/login" />
+        } />
+        <Route path="/expenses" element={
+          isAuthenticated ? <Expenses /> : <Navigate to="/login" />
+        } />
+        <Route path="*" element={
+          isAuthenticated ? <Navigate to="/dashboard" /> : <Navigate to="/login" />
+        } />
       </Routes>
     </BrowserRouter>
   )
