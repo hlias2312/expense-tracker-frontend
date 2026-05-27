@@ -1,16 +1,32 @@
-# React + Vite
+# 💰 Expense Tracker Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React frontend for the Expense Tracker REST API. Built with Vite and Axios.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ✅ Token-based authentication
+- ✅ Add, view, and delete expenses
+- ✅ Category management
+- ✅ Dashboard with total and per-category summary
+- ✅ Dark mode UI
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React, Vite
+- **HTTP Client**: Axios
+- **Routing**: React Router DOM
 
-## Expanding the ESLint configuration
+## Related Repository
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Backend API: [expense-tracker-api](https://github.com/hlias2312/expense-tracker-api)
+
+## Installation
+
+```bash
+git clone https://github.com/hlias2312/expense-tracker-frontend.git
+cd expense-tracker-frontend
+npm install
+npm run dev
+```
+
+> Make sure the backend API is running on `http://127.0.0.1:8000`
