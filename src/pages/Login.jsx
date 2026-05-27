@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const BASE_URL = 'http://127.0.0.1:8000/api'
+const BASE_URL = 'https://expense-tracker-api-production-7af4.up.railway.app/api/'
 
 function Login({ setIsAuthenticated }) {
   const [username, setUsername] = useState('')
