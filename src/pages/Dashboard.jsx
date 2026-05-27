@@ -7,8 +7,11 @@ function Dashboard() {
   useEffect(() => {
     api.get('/expenses/summary/')
       .then(res => setSummary(res.data))
-      .catch(err => console.error(err))
-  }, [])
+      .catch(err => {
+        console.error(err)
+        setSummary({ total: 0, by_category: [] })
+      })
+}, [])
 
   return (
     <div style={styles.container}>

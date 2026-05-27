@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom'
 
 function Navbar({ setIsAuthenticated }) {
   const handleLogout = () => {
+    localStorage.removeItem('token')
     setIsAuthenticated(false)
     window.location.href = '/login'
-  }
+}
 
   return (
     <nav style={styles.nav}>
